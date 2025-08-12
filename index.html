@@ -1,110 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Wilbur Zzz | Cybersecurity & Digital Forensics</title>
-  <meta name="description" content="Portfolio of a Cybersecurity & Digital Forensics student at Singapore Polytechnic (2024–2027).">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Wilbur Zzz · Cybersecurity & Digital Forensics</title>
+<meta name="description" content="Portfolio of Wilbur Zzz, Year 2 Cybersecurity & Digital Forensics student at Singapore Polytechnic.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --ink:#15171a;
+    --muted:#5b6470;
+    --line:#e8edf3;
+    --card:#f8fafc;
+    --accent:#4f46e5; /* indigo */
+    --accent-ink:#fff;
+    --radius:14px;
+    --max:980px;
+  }
+  @media (prefers-color-scheme: dark){
     :root{
-      --bg:#0b1220;        /* deep navy */
-      --card:#11192c;
-      --ink:#e8eefc;       /* near white */
-      --muted:#a9b6d6;
-      --accent:#00c2ff;    /* teal-blue */
-      --chip:#18243c;
-      --ring:#1e3054;
-      --shadow:0 10px 30px rgba(0,0,0,.25);
-      --radius:16px;
-      --max:1100px;
+      --bg:#0f1318; --ink:#f2f5f8; --muted:#a7b0bc; --line:#1f2530; --card:#121821;
+      --accent:#7c8cff; --accent-ink:#0b0f14;
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0; background:radial-gradient(1000px 600px at 80% -10%, #123 0%, transparent 50%) , var(--bg);
-      color:var(--ink); font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      line-height:1.6;
-    }
-    a{color:var(--accent); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
-    /* nav */
-    nav{position:sticky; top:0; backdrop-filter:blur(8px); background:rgba(11,18,32,.65); border-bottom:1px solid #1b2742; z-index:10}
-    nav .wrap{display:flex; align-items:center; justify-content:space-between; padding:14px 20px}
-    .brand{font-family:Poppins,Inter,sans-serif; font-weight:700; letter-spacing:.3px}
-    .menu a{margin-left:18px; font-weight:600; color:var(--ink)}
-    .menu a:hover{color:var(--accent)}
-    /* hero */
-    header.hero{padding:84px 0 40px}
-    .hero h1{font-family:Poppins,Inter,sans-serif; font-size:40px; line-height:1.2; margin:8px 0 10px}
-    .tag{color:var(--muted); font-weight:600; letter-spacing:.3px}
-    .links{display:flex; gap:14px; margin-top:16px; flex-wrap:wrap}
-    .btn{display:inline-flex; align-items:center; gap:8px; background:var(--accent); color:#041322; font-weight:700; padding:10px 14px; border-radius:12px}
-    .btn.secondary{background:transparent; color:var(--ink); border:1px solid var(--ring)}
-    /* sections */
-    section{padding:42px 0}
-    h2{font-family:Poppins,Inter,sans-serif; font-size:26px; margin:0 0 18px}
-    .card{background:var(--card); border:1px solid #1a2745; border-radius:var(--radius); padding:20px; box-shadow:var(--shadow)}
-    .grid{display:grid; gap:18px}
-    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    @media (max-width:900px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
-    /* chips */
-    .chips{display:flex; flex-wrap:wrap; gap:10px}
-    .chip{background:var(--chip); border:1px solid #223257; padding:6px 10px; border-radius:999px; color:var(--muted); font-size:14px}
-    /* project */
-    .project{display:flex; gap:16px; align-items:flex-start}
-    .project img{width:120px; height:80px; object-fit:cover; border-radius:12px; border:1px solid #203357}
-    .project h3{margin:0 0 6px}
-    .meta{color:var(--muted); font-size:14px}
-    /* timeline list */
-    .list{display:grid; gap:12px}
-    .item{padding:14px; border-radius:14px; background:var(--chip); border:1px solid #223257}
-    .item strong{display:block}
-    footer{padding:50px 0 60px; color:var(--muted); text-align:center}
-    .muted{color:var(--muted)}
-  </style>
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;line-height:1.65}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+  /* header */
+  .top{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:3}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .brand{font-family:Playfair Display,serif;font-weight:600;font-size:22px;letter-spacing:.2px}
+  .menu a{margin-left:18px;color:var(--muted);text-decoration:none;font-weight:600}
+  .menu a:hover{color:var(--accent)}
+  /* hero */
+  header{padding:54px 0 24px}
+  .hero h1{font-family:Playfair Display,serif;font-size:40px;line-height:1.15;margin:0 0 10px}
+  .tag{color:var(--muted);font-weight:600;margin-bottom:14px}
+  .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+  .btn{display:inline-block;padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none}
+  .btn.primary{background:var(--accent);color:var(--accent-ink)}
+  .btn.ghost{border:1px solid var(--line);color:var(--ink)}
+  /* sections */
+  section{padding:30px 0;border-top:1px solid var(--line)}
+  h2{font-size:22px;margin:0 0 12px}
+  p{margin:0 0 10px}
+  /* cards & grids */
+  .grid{display:grid;gap:16px}
+  .cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  @media (max-width:900px){.cols-2{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{background:#eef2ff;border:1px solid #e0e7ff;color:#3730a3;padding:5px 10px;border-radius:999px;font-size:13px}
+  @media (prefers-color-scheme: dark){
+    .chip{background:#1a1f33;border-color:#303a6a;color:#c9d1ff}
+  }
+  /* projects */
+  .proj{display:flex;gap:16px}
+  .proj img{width:140px;height:94px;object-fit:cover;border-radius:10px;border:1px solid var(--line);background:#ddd}
+  .proj h3{margin:0 0 4px;font-size:18px}
+  .meta{color:var(--muted);font-size:14px}
+  /* lists */
+  ul.clean{margin:8px 0 0 18px}
+  li{margin:6px 0}
+  /* footer */
+  footer{padding:30px 0 60px;color:var(--muted);text-align:center}
+</style>
 </head>
 <body>
-
-  <!-- NAV -->
-  <nav>
-    <div class="wrap">
+  <!-- top bar -->
+  <div class="top">
+    <div class="wrap nav">
       <div class="brand">Wilbur Zzz</div>
-      <div class="menu">
+      <nav class="menu">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
+        <a href="#edu">Education</a>
         <a href="#volunteer">Volunteer</a>
         <a href="#contact">Contact</a>
-      </div>
+      </nav>
     </div>
-  </nav>
+  </div>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="wrap">
-      <span class="tag">Cybersecurity & Digital Forensics • Singapore Polytechnic (2024–2027)</span>
-      <h1>Investigating, Securing & Defending the Digital World</h1>
-      <p class="muted">Year 2 student specialising in <strong>Digital Forensics</strong> — passionate about uncovering truth from digital evidence, understanding attack patterns, and protecting systems.</p>
-      <div class="links">
-        <a class="btn" href="mailto:YOUR_EMAIL">Email me</a>
-        <a class="btn secondary" href="https://YOUR_LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn secondary" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener">GitHub</a>
-      </div>
+  <!-- hero -->
+  <header class="wrap">
+    <span class="tag">Cybersecurity & Digital Forensics · Singapore Polytechnic (2024–2027)</span>
+    <h1>Digital Forensics Student focused on evidence, timelines & response</h1>
+    <p>Year 2 student specialising in <strong>Digital Forensics</strong>. I investigate digital evidence with tools like Magnet AXIOM and Wireshark, and I build secure systems and simple apps with Linux/Windows admin and Node.js + MySQL.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:YOUR_EMAIL">Email</a>
+      <a class="btn ghost" href="https://YOUR_LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener">GitHub</a>
     </div>
   </header>
 
-  <!-- ABOUT -->
+  <!-- about -->
   <section id="about">
     <div class="wrap grid cols-2">
-      <div class="card">
-        <h2>About Me</h2>
-        <p>I'm a Cybersecurity and Digital Forensics student at Singapore Polytechnic. Through hands-on projects and coursework, I’ve built a foundation in ethical hacking, Linux and Windows administration, and secure web development. Tools like <strong>Magnet AXIOM</strong>, <strong>Wireshark</strong>, and <strong>Kali Linux</strong> support my investigative work.</p>
-        <p>I’m curious about how attackers exploit weaknesses—and even more interested in how defenders prevent, detect, and respond. I enjoy analysing logs, tracing digital footprints, and hardening systems. I value teamwork, resilience, and continuous learning, and aim to support real investigations and protect digital environments.</p>
+      <div>
+        <h2>About</h2>
+        <p>I’m passionate about uncovering the truth behind cyber incidents—investigating digital footprints, preserving integrity, and explaining findings clearly. I enjoy analysing logs, reconstructing timelines, and hardening systems. Teamwork, resilience, and sharing knowledge matter to me.</p>
       </div>
       <div class="card">
         <h2>Languages</h2>
@@ -112,176 +110,116 @@
           <span class="chip">Burmese — Native/Bilingual</span>
           <span class="chip">English — Full Professional</span>
         </div>
-        <h2 style="margin-top:20px">Highlights</h2>
-        <ul class="muted">
-          <li>Specialisation: <strong>Digital Forensics</strong></li>
-          <li>Location: Singapore</li>
-          <li>Open to: Internships & project collaborations</li>
-        </ul>
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- skills -->
   <section id="skills">
-    <div class="wrap">
-      <h2>Skills</h2>
-      <div class="grid cols-3">
-        <div class="card">
-          <strong>Digital Forensics</strong>
-          <div class="chips" style="margin-top:8px">
-            <span class="chip">Magnet AXIOM</span>
-            <span class="chip">FTK</span>
-            <span class="chip">Network Forensics</span>
-            <span class="chip">Mobile Forensics</span>
-            <span class="chip">Computer Forensics</span>
-            <span class="chip">Malware Analysis</span>
-          </div>
+    <div class="wrap grid cols-2">
+      <div class="card">
+        <h2>Technical Skills</h2>
+        <div class="chips">
+          <span class="chip">Magnet AXIOM</span><span class="chip">FTK</span>
+          <span class="chip">Network/Mobile/Computer Forensics</span>
+          <span class="chip">Wireshark</span><span class="chip">Malware Analysis</span>
+          <span class="chip">Linux (Kali, RHEL)</span><span class="chip">Windows Admin</span>
+          <span class="chip">Active Directory</span><span class="chip">Node.js</span>
+          <span class="chip">MySQL</span><span class="chip">HTML/CSS/JS</span>
+          <span class="chip">C#</span><span class="chip">WordPress</span>
         </div>
-        <div class="card">
-          <strong>Cybersecurity</strong>
-          <div class="chips" style="margin-top:8px">
-            <span class="chip">Ethical Hacking</span>
-            <span class="chip">Network Security</span>
-            <span class="chip">Firewalls</span>
-            <span class="chip">VPN</span>
-            <span class="chip">Wireshark</span>
-            <span class="chip">Active Directory</span>
-          </div>
-        </div>
-        <div class="card">
-          <strong>Development & Systems</strong>
-          <div class="chips" style="margin-top:8px">
-            <span class="chip">HTML</span>
-            <span class="chip">CSS</span>
-            <span class="chip">JavaScript</span>
-            <span class="chip">Node.js</span>
-            <span class="chip">MySQL</span>
-            <span class="chip">C#</span>
-            <span class="chip">WordPress</span>
-            <span class="chip">Linux (Kali, RHEL)</span>
-            <span class="chip">Windows Admin</span>
-            <span class="chip">Unity</span>
-          </div>
-        </div>
-        <div class="card">
-          <strong>Soft Skills</strong>
-          <div class="chips" style="margin-top:8px">
-            <span class="chip">Communication</span>
-            <span class="chip">Teamwork</span>
-            <span class="chip">Customer Service</span>
-            <span class="chip">Problem Solving</span>
-            <span class="chip">Critical Thinking</span>
-            <span class="chip">Resilience</span>
-          </div>
+      </div>
+      <div class="card">
+        <h2>Soft Skills</h2>
+        <div class="chips">
+          <span class="chip">Communication</span><span class="chip">Teamwork</span>
+          <span class="chip">Customer Service</span><span class="chip">Problem Solving</span>
+          <span class="chip">Critical Thinking</span><span class="chip">Resilience</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- projects -->
   <section id="projects">
     <div class="wrap">
       <h2>Projects</h2>
       <div class="grid">
-        <div class="card project">
-          <img src="assets/network-infra.jpg" alt="Network infrastructure diagram placeholder">
+        <div class="card proj">
+          <img src="assets/network-infra.jpg" alt="Network infrastructure">
           <div>
             <h3>Network Infrastructure for Workplace</h3>
-            <p class="meta">Designed and configured a secure, segmented network for a simulated workplace to support operations and security controls.</p>
-            <p class="muted"><strong>Tech:</strong> VLANs, Routing, Switch Config, Access Control, Monitoring</p>
+            <p class="meta">Designed a segmented network for a simulated company with routing, VLANs and access controls.</p>
+            <p class="meta"><strong>Tech:</strong> VLANs, Routing, Switch Config, Monitoring</p>
           </div>
         </div>
-
-        <div class="card project">
-          <img src="assets/lone-wolf.jpg" alt="Digital forensics case analysis placeholder">
+        <div class="card proj">
+          <img src="assets/lone-wolf.jpg" alt="Lone Wolf case">
           <div>
-            <h3>Digital Forensics Case – Lone Wolf 2018</h3>
-            <p class="meta">Acquired, examined, and reported on digital evidence to identify malicious activity and timelines; practiced evidence preservation and chain of custody.</p>
-            <p class="muted"><strong>Tools:</strong> Magnet AXIOM, FTK, Wireshark</p>
+            <h3>Digital Forensics Case — Lone Wolf 2018</h3>
+            <p class="meta">Acquired, examined, and reported on evidence to identify activity and timelines; preserved chain of custody.</p>
+            <p class="meta"><strong>Tools:</strong> Magnet AXIOM, FTK, Wireshark</p>
           </div>
         </div>
-
-        <div class="card project">
-          <img src="assets/m57-jean.jpg" alt="M57 Jean case placeholder">
+        <div class="card proj">
+          <img src="assets/m57-jean.jpg" alt="M57 Jean case">
           <div>
-            <h3>Digital Forensics Case – M57 Jean (2009)</h3>
-            <p class="meta">Ongoing analysis of the M57-Jean scenario, focusing on file system artifacts, browser history, and email evidence to reconstruct events.</p>
-            <p class="muted"><strong>Tools:</strong> Magnet AXIOM, FTK</p>
+            <h3>Digital Forensics Case — M57 Jean (2009, ongoing)</h3>
+            <p class="meta">Analysing filesystem artefacts, browser history and email evidence to reconstruct events.</p>
+            <p class="meta"><strong>Tools:</strong> Magnet AXIOM, FTK</p>
           </div>
         </div>
-
-        <div class="card project">
-          <img src="assets/vuln-platform.jpg" alt="Vulnerability reporting platform screenshot placeholder">
+        <div class="card proj">
+          <img src="assets/vuln-platform.jpg" alt="Vulnerability platform">
           <div>
             <h3>Vulnerability Reporting Platform</h3>
-            <p class="meta">Back‑end web app where users report vulnerabilities and earn points to climb a leaderboard; includes badge system and weekly top‑10.</p>
-            <p class="muted"><strong>Tech:</strong> Node.js, MySQL, Bootstrap</p>
+            <p class="meta">Back-end app where users report vulnerabilities and earn points to climb a leaderboard; badges & weekly top-10.</p>
+            <p class="meta"><strong>Tech:</strong> Node.js, MySQL, Bootstrap</p>
           </div>
         </div>
       </div>
-      <p class="muted" style="margin-top:10px">📸 Replace the four image placeholders in <code>/assets/</code> with your screenshots (same filenames), or update the <code>src</code> paths.</p>
+      <p class="meta" style="margin-top:8px">Replace the four images in <code>/assets/</code> to your screenshots or change the <code>src</code> paths.</p>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
+  <!-- experience -->
   <section id="experience">
     <div class="wrap">
       <h2>Experience</h2>
-      <div class="list">
-        <div class="item">
-          <strong>Banquet Server — The Fullerton Bay Hotel Singapore</strong>
-          <span class="muted">Part-time • May 2024 – Present • Singapore (On-site)</span>
-          <ul class="muted">
-            <li>Set up and broke down event spaces for weddings, galas, and corporate events.</li>
-            <li>Delivered professional F&amp;B service under time pressure; coordinated with kitchen and event teams.</li>
-            <li>Maintained organised work areas while managing multiple tables and large guest counts.</li>
-          </ul>
-        </div>
-        <div class="item">
-          <strong>Banquet Server — Conrad Singapore Marina Bay</strong>
-          <span class="muted">Part-time • Jul 2024 – Present • Singapore (On-site)</span>
-        </div>
-        <div class="item">
-          <strong>Banquet Server — Pan Pacific Orchard, Singapore</strong>
-          <span class="muted">Part-time • Jun 2024 – Present • Singapore (On-site)</span>
-        </div>
+      <div class="card">
+        <ul class="clean">
+          <li><strong>Banquet Server — The Fullerton Bay Hotel Singapore</strong> · Part-time · May 2024–Present · Singapore (On-site)
+            <ul class="clean">
+              <li>Set up/tear down event spaces; served under time pressure; coordinated with kitchen & floor teams.</li>
+              <li>Maintained organisation while managing multiple tables and large guest counts.</li>
+            </ul>
+          </li>
+          <li><strong>Banquet Server — Conrad Singapore Marina Bay</strong> · Part-time · Jul 2024–Present · Singapore</li>
+          <li><strong>Banquet Server — Pan Pacific Orchard, Singapore</strong> · Part-time · Jun 2024–Present · Singapore</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- EDUCATION -->
-  <section id="education">
+  <!-- education & volunteer -->
+  <section id="edu">
     <div class="wrap grid cols-2">
       <div class="card">
         <h2>Education</h2>
-        <p><strong>Singapore Polytechnic</strong> — Diploma in Infocomm Security Management</p>
-        <p class="muted">2024 – 2027 • Specialisation: Digital Forensics</p>
+        <p><strong>Singapore Polytechnic</strong> — Diploma in Infocomm Security Management (2024–2027)</p>
+        <p class="meta">Specialisation: Digital Forensics</p>
+        <p><strong>Conceptx International School</strong> — GCE O-Level (2021–2023)</p>
       </div>
-      <div class="card">
-        <h2>&nbsp;</h2>
-        <p><strong>Conceptx International School</strong> — GCE O‑Level</p>
-        <p class="muted">2021 – 2023</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- VOLUNTEER -->
-  <section id="volunteer">
-    <div class="wrap grid cols-2">
-      <div class="card">
+      <div class="card" id="volunteer">
         <h2>Volunteer</h2>
-        <ul class="muted">
+        <ul class="clean">
           <li>Singapore Polytechnic Open House 2025</li>
           <li>SP CARES Food Donation Drive</li>
         </ul>
-      </div>
-      <div class="card">
-        <h2>Certs & Awards (Targets)</h2>
-        <p class="muted">Actively pursuing:</p>
-        <ul class="muted">
+        <h2 style="margin-top:14px">Certs & Awards — Targets</h2>
+        <ul class="clean">
           <li>TryHackMe — Introduction to Cybersecurity</li>
-          <li>Cisco Networking Academy — Introduction to Cybersecurity</li>
+          <li>Cisco NetAcad — Introduction to Cybersecurity</li>
           <li>LinkedIn Learning — Learning Digital Forensics</li>
           <li>Google Cybersecurity (selected modules)</li>
         </ul>
@@ -289,19 +227,18 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- contact -->
   <section id="contact">
     <div class="wrap card">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a> &nbsp;•&nbsp; LinkedIn: <a href="https://YOUR_LINKEDIN" target="_blank" rel="noopener">/YOUR_LINKEDIN</a> &nbsp;•&nbsp; GitHub: <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener">@YOUR_GITHUB</a></p>
-      <p class="muted">I’m open to internship opportunities in cybersecurity/digital forensics.</p>
+      <p>Email: <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a> · LinkedIn: <a href="https://YOUR_LINKEDIN" target="_blank" rel="noopener">YOUR_LINKEDIN</a> · GitHub: <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener">@YOUR_GITHUB</a></p>
+      <p class="meta">Open to internships and project collaborations in cybersecurity/digital forensics.</p>
     </div>
   </section>
 
   <footer>
-    © <span id="y"></span> Wilbur Zzz • Built with HTML/CSS • Hosted on GitHub Pages
+    © <span id="y"></span> Wilbur Zzz · Built with HTML/CSS · Print-friendly
   </footer>
-
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
